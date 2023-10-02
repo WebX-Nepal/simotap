@@ -1,0 +1,139 @@
+.itemSection {
+    margin-top: 60px;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section1 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .left {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  
+  .left img {
+    width: 390px;
+    height: 340px;
+    object-fit: cover;
+    background-color: #D9D9D9;
+  }
+  
+  .right {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  
+  .quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .qty_text {
+    padding: 4px 10px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #D9D9D9;
+    color: #000;
+    align-self: center;
+    justify-self: center;
+  }
+  
+  .quantity-controls button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #D9D9D9;
+    color: #000;
+    transition: transform 0.3s ease;
+  }
+  
+  .quantity-controls button:hover {
+    background-color: #000;
+    color: #D9D9D9;
+  }
+  
+  .right h1,
+  .right h2 {
+    margin: 0;
+  }
+  
+  .right h1 {
+    font-size: 34px;
+    font-weight: 500;
+  }
+  
+  .right h2 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #464646;
+  }
+  
+  .itemDetail p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #464646;
+  }
+  
+  .itemDetail button {
+    width: fit-content;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 60px;
+    border-radius: 50px;
+    color: white;
+    background: linear-gradient(#2E2F84, #652E91);
+    cursor: pointer;
+  }
+@media (max-width: 768px) {
+    .itemSection {
+        padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+    .itemSection .section1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+.left{    
+      
+        align-items: center;
+        justify-content: center;
+    
+    }
+    .quantity-controls {
+        margin-top: 0; /* Reset margin-top on smaller screens */
+    }
+
+    .quantity-controls button{
+        width: 24px; /* Reduce button size for smaller screens */
+        height: 24px;
+        font-size: 16px;
+        
+    }
+     .qty_text {
+        font-size: 14px;
+    }
+
+     .itemDetail button {
+        padding: 10px 30px; /* Reduce button padding for smaller screens */
+    }
+}

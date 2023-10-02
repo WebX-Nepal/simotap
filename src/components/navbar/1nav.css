@@ -1,0 +1,217 @@
+menu
+.menuIcon {
+  display: none; /* Hide by default for larger screens */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menuIcon.active {
+  display: flex;
+}
+
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 3px 0;
+  transition: transform 0.3s ease;
+}
+
+.menuIcon.active .bar:first-child {
+  transform: rotate(-45deg) translate(-7px, 4px);
+}
+
+.menuIcon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menuIcon.active .bar:last-child {
+  transform: rotate(45deg) translate(-7px, -4px);
+}
+
+
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  background-color: rgba(197, 197, 197, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 0 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.logoDiv{
+  width: 30%;
+}
+.img {
+  height: 22px;
+  width: 130;
+  cursor: pointer;
+}
+
+.linkDiv {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.linkDiv div{
+  display: flex;
+  gap: 80px;
+}
+.link p {
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.linkDiv h2:hover{
+  color: black;
+text-decoration: underline 2px #2E2F84;
+text-underline-offset: 5px;
+} 
+/* .linkDiv h2:active{
+  color: black;
+text-decoration: underline 2px #2E2F84;
+text-underline-offset: 5px;
+
+} */
+.active{
+  color: black;
+  text-decoration: underline 2px #2E2F84;
+  text-underline-offset: 5px;
+}
+span{
+  color: black;
+}
+.nav a{
+  text-decoration: none;
+ 
+}
+.signUpBtn{
+  padding: 8px 24px;
+  outline: none;
+  border-radius: 50px;
+  border: 2px solid rebeccapurple;
+  color:rebeccapurple;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.signUpBtn:hover{
+  background: linear-gradient( #2E2F84,#652E91 );
+  color: #EDEDED;
+}
+
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .menuIcon {
+    display: flex; /* Display the hamburger icon on smaller screens */
+  }
+
+  .nav {
+    padding: 0 20px; /* Reduce padding for smaller screens */
+  }
+
+  .img {
+    height: 18px;
+    width: auto; /* Allow the logo to scale down */
+  }
+
+  .linkDiv {
+    display: none; /* Hide links by default on smaller screens */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: rgba(197, 197, 197, 0.2);
+    backdrop-filter: blur(4px);
+    z-index: 101;
+    width: 150px; /* Adjust the width as needed */
+  }
+
+  .linkDiv.active {
+    display: flex; /* Display links when active class is applied (e.g., on menu button click) */
+    flex-direction: column; /* Stack links vertically */
+  }
+
+  .linkDiv.active h2 {
+    margin: 10px;
+  }
+}
+
+
+
+import { react, useState } from "react";
+import styles from "./Navbar.module.css";
+import { Link, NavLink } from "react-router-dom";
+
+function Navbar() {
+  // adding the states
+  const [isActive, setIsActive] = useState(false);
+
+  //add the active class
+  const toggleActiveClass = () => {
+    setIsActive(!isActive);
+  };
+
+
+
+  //clean up function to remove the active class
+  const removeActive = () => {
+    setIsActive(false);
+  };
+
+  return (
+    <div className={`${styles.nav}`}>
+      {
+      <NavLink to="/" className={`${styles.logo}`}>
+        <img src="src/assets/logo.png" />
+      </NavLink>}
+
+      <ul className={`${styles.navMenu} ${isActive ? styles.active : ""}`}>
+        <li onClick={removeActive}>
+          <NavLink to="/" className={({isActive})=>(isActive?styles.active:"")} >
+            Home
+          </NavLink>
+        </li>
+        <li onClick={removeActive}>
+          <NavLink to="/shop" className={({isActive})=>(isActive?styles.active:"")}>
+            Shop
+          </NavLink>
+        </li>
+        <li onClick={removeActive}>
+          <NavLink to="/aboutus" className={({isActive})=>(isActive?styles.active:"")}>
+            About Us
+          </NavLink>
+        </li>
+        <div className="bts">
+      <Link to='/login'><button className={styles.signUpBtn}>Sign Up</button>
+        </Link>
+      </div>
+      </ul>
+
+      <div
+        className={`${styles.hamburger} ${isActive?styles.active:""} `}
+        onClick={toggleActiveClass}
+      >
+       <span className={`${styles.bar}`}></span>
+       <span className={`${styles.bar}`}></span>
+       <span className={`${styles.bar}`}></span>
+
+      </div>
+      
+    </div>
+  );
+}
+
+export default Navbar;

@@ -1,0 +1,119 @@
+.loginPage{
+    height: 100vh;
+}
+.loginPage .nav{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 70px;
+  background-color: rgba(197, 197, 197, 0.2);
+  backdrop-filter: blur(4px);
+  padding: 0 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.nav .loginLogo{
+    max-width: 150px;
+}
+.loginPage .nav div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.loginPage .nav div .bar{
+    width: 22px;
+    height: 2px;
+    background-color: #000;
+    margin: 3px 0;
+transform: rotate(90deg) translate(0px, 0px);
+}
+
+.loginPage .nav .loginLogo2{
+    display: none;
+}
+
+.loginPage main{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top:60px ;
+}
+.buttonss{
+    position: absolute;
+    top: 100px;
+    left: 60px;
+    max-width: 90px;
+    color: white;
+    min-height: 25px;
+    min-width: 40px;
+    border: 1px solid black;
+    background: #330088;
+    padding: 6px 12px;
+    border-radius: 10px;
+}
+.loginPage main h1{
+    text-align: center;
+    color: #9F9C9C;
+}
+.loginPage main .loginTypes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    width:300px;
+}
+.loginPage main .loginTypes .butn{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px;
+    border: none;
+    border-radius: 50px;
+    background-color: #D9D9D9;
+     padding:10px 25px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.butn img{
+    height: 35px;
+}
+.loginPage main h2{
+    text-align: center;
+    color: rebeccapurple;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 16px;
+}
+.loginPage main h2:hover{
+    border-bottom: 1px solid rebeccapurple;
+}
+
+@media (max-width: 768px) {
+    .loginPage .nav {
+      padding: 0 20px; /* Adjust padding for smaller screens */
+    }
+
+   .loginPage .nav div{
+    display: none;
+   }
+   .loginPage .nav .loginLogo2{
+    display: block;
+   }
+   .loginPage main{
+    margin-top: 30px;
+   }
+    .loginPage main .loginTypes {
+      width: 80%; /* Expand to full width on smaller screens */
+    }
+  }

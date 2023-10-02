@@ -1,0 +1,120 @@
+@import '@radix-ui/colors/black-alpha.css';
+@import '@radix-ui/colors/violet.css';
+@import '@radix-ui/colors/mauve.css';
+
+/* reset */
+input,
+textarea,
+button {
+  all: unset;
+  box-sizing: border-box;
+}
+
+.background{
+  height: max-content;
+  background-color: white;
+  border-radius: 35px;
+}
+.FormRoot {
+  max-width: 80%;
+  height: 86vh;
+  margin: -10px 0px 10px  60px;
+  padding: 25px;
+}
+
+.FormField {
+  display: grid;
+  margin-bottom: 10px;
+}
+
+.FormLabel {
+  font-size: 22px;
+  line-height: 35px;
+  color:black;
+  margin-left:10px ;
+  /* margin:0px 0px 0px 80px; */
+}
+
+.FormMessage {
+  font-size: 13px;
+  color: black;
+  opacity: 0.8;
+}
+
+.Input,
+.Textarea {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+
+  font-size: 15px;
+  color: black;
+  /* background-color: var(--black-a5); */
+  box-shadow: 0 0 0 1px var(--black-a9);
+}
+.Input:hover,
+.Textarea:hover {
+  box-shadow: 0 0 0 1px black;
+}
+.Input:focus,
+.Textarea:focus {
+  box-shadow: 0 0 0 2px black;
+}
+.Input::selection,
+.Textarea::selection {
+  background-color: var(--black-a9);
+  color: white;
+}
+
+.Input {
+  padding: 0 10px;
+  height: 35px;
+  line-height: 1;
+}
+
+.Textarea {
+  resize: none;
+  padding: 10px;
+}
+
+.Button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 25px 15px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+  height: 35px;
+  width: 70%;
+  margin: 100px 90px 10px;
+  background:linear-gradient( #5b5c9e,#8f62b4 );
+  
+  color: white;
+}
+.Button:hover {
+  background-color: var(--mauve-3);
+}
+.Button:focus {
+  box-shadow: 0 0 0 2px black;
+}
+
+
+.payment-methods{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 20px;
+}
+.payment-text{
+  font-size: 25px;
+  margin: 25px auto;
+}
+.payment-text p{
+  font-size: 25px;
+}
+.payment-methods img{
+  width: 80px;
+}

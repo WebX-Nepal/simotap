@@ -1,0 +1,232 @@
+.exit-btn{
+    margin-left: -35px;
+}
+.containers{
+    position: relative;
+    max-height: 165vh;
+    width: 30%;
+    margin:  auto;
+    background-color:azure;
+    display: block;
+    overflow: hidden;
+    margin-top: -70px;
+    border-radius: 25px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons{
+    font-size: 25px;
+    margin: 25px;
+}
+
+.top h1{
+    margin-top: 20px;
+}
+
+.cover-img{
+    height: 150px;
+    max-width: 90%;
+    margin: 10px 20px 9px;
+}
+
+.profile-img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+   margin: -80px 145px 0px;
+}
+.profile-name h3{
+    font-size: 18px;
+    margin: 10px 130px 20px;
+    font-weight: bold;
+}
+
+.description{
+    height: 65px;
+    background-color: #EAEAEA;
+    display: block;
+    margin: 14px 20px;
+    border-radius: 10px;
+    padding: 10px 50px;
+    text-wrap: justify;
+}
+
+.description p{
+    font-size: 18px;
+    color: #8B8B8B;
+}
+
+.phone{
+    height: 45px;
+    max-width: 340px;
+    display: block;
+    background-color: #2d2f84;
+    margin: 17px 37px 0px;
+    border-radius: 20px;
+}
+
+.phone p{
+    font-size: 15px;
+    color: #ffffff;
+    padding: 12px 100px ;
+}
+
+.link-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 110px;
+    max-width:350px;
+    margin: 30px 0px -170px 31px;
+}
+
+.component{
+    height: 25px;
+    width: 25px;
+    
+}
+.component img{
+    height: 60px;
+    /* width: 60px; */
+    margin: 4px;
+}
+.component p{
+    font-size: 14px;
+    font-weight: 550;
+    margin: 2px;
+}
+
+.additional-links{
+    display: block;
+    max-width: 80%;
+    margin: 10px 40px;
+
+}
+
+.additional-links p{
+    text-align: center;
+    display: block;
+    margin: 270px 110px 18px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.add-link{
+    height: 36px;
+    width: 320px;
+    background-color: #eaeaea;
+    margin: 2px auto;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+}
+.add-link img{
+    margin: 8px 90px;
+    height: 20px;
+}
+.add-link p{
+    margin:8px -98px;
+    font-size: 15px;
+}
+.profile-edit{
+    max-height: 45px;
+    max-width: 340px;
+    background-color: #2d2f84;
+    border-radius: 20px;
+    margin: 25px 35px 0px;
+    padding: 8px 120px;
+}
+
+.profile-edit p{
+    color: white;
+    font-size: 16px;
+}
+
+.bottom{
+    max-width: 350px;
+    box-shadow: 0px 5px -5px #5f5b5b;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 30px 25px;
+    /* border: 1px solid #2d2f84; */
+    /* position: fixed; */
+    padding: 25px 25px 10px;
+    border-radius: 12px;
+}
+.bottom img{
+    height: 40px;
+}
+
+@media (max-width:768px) {
+        .exit-btn{
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+
+        .containers{
+            margin: -70px auto;
+            width: 50%;
+        }
+        .buttons{
+            font-size: 16px;
+        }
+        .top h1{
+            font-size: 24px;
+            margin: 22px auto 10px;
+        }
+        .cover-img{
+            /* max-width: 260px; */
+            max-height: 130px;
+        }
+        .profile-img{
+            height: 80px;
+            width: 80px;
+            margin-left: 140px;
+        }
+        .profile-name h3{
+            font-size: 14px;
+            margin: 8px 135px 20px;
+        }
+        .description {
+            max-width: 450px;
+            margin: 0px 15px;
+            padding: 2px 10px;
+        }
+        .description p{
+            font-size: 16px;
+        }
+        .phone{
+            margin-left: 30px;
+            padding: 4px 20px;
+            text-wrap: wrap;
+        }
+        .phone p{
+            font-size: 12px;
+        }
+        .link-section{
+            max-width: 300px;
+            margin-bottom: 10px;
+        }
+        .component img{
+            height: 35px;
+            margin: 5px;
+        }
+        .component p{
+            font-size: 12px;
+        }
+        .additional-links{
+            margin: 8px 20px;
+        }
+        .additional-links p{
+            font-size: 15px;
+        }
+        .add-link p{
+            font-size: 15px;
+        }
+        .profile-edit p{
+            font-size: 13px;
+        }
+}
