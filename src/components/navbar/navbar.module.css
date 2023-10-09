@@ -13,9 +13,9 @@ a {
   color: black;
   font-size: 18px;
 }
- .active{
+.active {
   color: black;
-  text-decoration: underline 2px #2E2F84;
+  text-decoration: underline 2px #2e2f84;
   text-underline-offset: 5px;
 }
 /* navbar */
@@ -43,64 +43,59 @@ a {
   padding: 15px;
 }
 
-
 /* logo  */
-.nav .logo img{
+.nav .logo img {
   margin: 0px 70px;
   max-width: 160px;
   align-items: center;
 }
 
-
 /* ul  */
 .navMenu {
-  margin-left: 150px;
+  /* margin-left: 150px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 100px;
 }
+
 .navMenu.active {
   display: flex;
   flex-direction: column;
   position: absolute;
   width: cover;
   top: 70px; /* Adjust as needed */
-  right:20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
   border-radius: 5px;
   padding: 10px;
   z-index: 1000;
   animation: textFadeIn 3s ease;
-
 }
- .signUpBtn{
+.signUpBtn {
   margin: 40px;
   padding: 8px 24px;
   outline: none;
   border-radius: 50px;
   border: 2px solid rebeccapurple;
-  color:rebeccapurple;
+  color: rebeccapurple;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.signUpBtn:hover{
-  background: linear-gradient( #2E2F84,#652E91 );
-  color: #EDEDED;
+.signUpBtn:hover {
+  background: linear-gradient(#2e2f84, #652e91);
+  color: #ededed;
 }
- li:hover{
+li:hover {
   color: black;
-  text-decoration: underline 2px #2E2F84;
+  text-decoration: underline 2px #2e2f84;
   text-underline-offset: 5px;
 }
 
-
-
 /* media queries */
 
-@media screen and (max-width: 780px){
- 
+@media screen and (max-width: 780px) {
   /* hamburger */
   .hamburger {
     display: block;
@@ -108,30 +103,29 @@ a {
   }
 
   .bar {
-        background-color: #120f0b;
-        width: 20px;
-        height: 3px;
-        display: block;
-        margin: 5px;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-    }
+    background-color: #120f0b;
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin: 5px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
 
   /* adding active class to the bars  */
-  .hamburger.active .bar:nth-child(2){
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
-  .hamburger.active .bar:nth-child(1){
+  .hamburger.active .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
-  .hamburger.active .bar:nth-child(3){
+  .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-
   /* navMenu */
 
-  .navMenu{
+  .navMenu {
     display: none;
     position: absolute;
     flex-direction: column;
@@ -141,20 +135,20 @@ a {
     text-align: start;
     width: 60%;
     transition: 0.7s ease-in-out;
-    background-color: #acade7;
+    background-color: #bdbdc8;
     padding: 10px;
     text-decoration: none;
     color: white;
   }
 
-  .navMenu.active{
+  .navMenu.active {
     left: 0;
   }
 
   .navMenu li {
     margin: 16px 0;
   }
-  .bts{
+  .bts {
     display: none;
   }
 }

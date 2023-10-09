@@ -18,7 +18,7 @@ import { Link } from "react-router-dom";
 import Section3 from "../homeComponent/section3/Section3.jsx";
 
 function HomeSection() {
-  
+
 
   const [accordions, setAccordions] = useState([
     {
@@ -63,7 +63,7 @@ function HomeSection() {
     <div className="homeSection">
       <Section1 />
       <Section2 />
-      <Section3/>
+      <Section3 />
       <Section4 />
       <Section5 />
       <Section6 />
@@ -75,7 +75,8 @@ function HomeSection() {
             title={accordion.title}
             content={accordion.content}
             isOpen={accordion.isOpen}
-            onClick={() => toggleAccordion(accordion.id)}
+            onClick={() => toggleAccordion(accordion.id)} className=
+            'tyty'
           />
         ))}
       </section>

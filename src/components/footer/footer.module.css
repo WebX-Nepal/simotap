@@ -1,31 +1,43 @@
 footer {
-  background: linear-gradient( #2E2F84,#652E91 );
-  
-  
+  width: 100%;
+  background: linear-gradient(#2e2f84, #652e91);
+
   color: white;
   display: flex;
   flex-direction: column;
-   gap: 40px;
+  gap: 40px;
   padding: 20px 60px;
   margin-top: 80px;
-
 }
 
-footer h1{
+@media (min-width: 640px) and (max-width: 1250px) {
+  footer {
+    width: 100%;
+    background: linear-gradient(#2e2f84, #652e91);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 60px;
+    margin-top: 80px;
+  }
+}
+
+footer h1 {
   /* margin: 0; */
-    text-align: center;
-    font-weight: 700;
-    font-size: 60px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 50px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid white;
 }
+
 .footerUp {
   display: flex;
- justify-content: space-between;
+  justify-content: space-between;
 }
-.footerUp h2{
+.footerUp h2 {
   margin: 0;
-  
 }
 
 .ft1,
@@ -38,39 +50,40 @@ footer h1{
 }
 .ft1s,
 .ft2s,
-.ft3s
-{
+.ft3s {
   display: flex;
   flex-direction: column;
   gap: 8px;
-}.ft4s{display: flex;
-  gap: 8px;}
-.ft1 .logo{
+}
+.ft4s {
+  display: flex;
+  gap: 8px;
+}
+.ft1 .logo {
   width: 130px;
   height: 22px;
 }
-.ft1 .icons{
+.ft1 .icons {
   display: flex;
   gap: 10px;
 }
-.ft1 .icons img{
+.ft1 .icons img {
   width: 20px;
   height: 20px;
 }
-.ft4 img{
+.ft4 img {
   width: 153px;
   height: 48px;
 }
 .footerDown {
   display: flex;
   justify-content: space-between;
-  
 }
-.footerDown img{
+.footerDown img {
   width: 50px;
   height: 14px;
 }
-footer p{
+footer p {
   margin: 0;
   font-size: 16px;
   font-weight: 500;
@@ -95,11 +108,10 @@ footer p{
 
   .ft4 {
     text-align: start; /* Center align the download app section */
-    
   }
-.ft4s{
-  flex-wrap: wrap;
-}
+  .ft4s {
+    flex-wrap: wrap;
+  }
   .footerDown {
     flex-direction: column; /* Stack content vertically for smaller screens */
     gap: 10px; /* Reduce gap between elements */
